@@ -1,0 +1,24 @@
+body{
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    color: white;
+    font-size: 2em;
+    display: flex;
+    background: linear-gradient(0deg, #0a0c0d, #348e91);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+}
+
+#logo{
+    width: 15vh;
+    filter: drop-shadow(2px -2px 1px #0a0c0d);
+}
+
+h1{
+    text-shadow: 1px 1px 2px #0a0c0d;
+}
