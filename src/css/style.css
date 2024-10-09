@@ -1,4 +1,5 @@
 body{
+    background-color: #c4c8c5;
     font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -7,7 +8,7 @@ header{
     color: white;
     font-size: 2em;
     display: flex;
-    background: linear-gradient(0deg, #0a0c0d, #348e91);
+    background: linear-gradient(0deg, #466067, #34baab);
     padding: 0.5em;
     margin-bottom: 1em;
     justify-content: center;
@@ -15,10 +16,11 @@ header{
 }
 
 #logo{
-    width: 15vh;
-    filter: drop-shadow(2px -2px 1px #0a0c0d);
+    width: 20vh;
+
 }
 
-h1{
-    text-shadow: 1px 1px 2px #0a0c0d;
+h2{
+    color: #f2f2f2;
+    text-shadow: 3px 3px 7px #0a0c0d;
 }
