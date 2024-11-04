@@ -1,8 +1,42 @@
-body{
-    background-color: #c4c8c5;
-    font-size: 1em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    --color-dark-gray: #484450;
+    --color-gray-blue: #466067;
+    --color-teal: #459a96;
+    --color-mint: #34baab;
+    --color-light-gray: #c4c8c5;
+    --color-ivory: #dfece6;
+    --color-charcoal: #2d2d29;
+}
+
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light-gray);
+    font-size: 1em;
+    font-family: 'Roboto';
+}
+
+main {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
 
 header{
     color: white;
@@ -12,7 +46,15 @@ header{
     padding: 0.5em;
     margin-bottom: 1em;
     justify-content: center;
-    border-radius: 10px 10px 0 0;
+}
+
+
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 #logo{
