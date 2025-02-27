@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyectos - GPAGUS</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Roobert", "Inter", "sans-serif"],
+                        elegant: ["Playfair Display", "serif"],
+                    },
+                    colors: {
+                        bg: "#EBEBEB",
+                        text: "#1c1c1c",
+                        textSecondary: "#3E5C76",
+                        primary: "#4A90E2",
+                        hover: "#005A87",
+                        border: "#D9E6F2",
+                    },
+                    animation: {
+                        'appear': 'appear 0.7s ease-out forwards',
+                    },
+                    keyframes: {
+                        appear: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-bg text-text font-sans flex flex-col items-center min-h-screen">
+    <!-- Cursor personalizado -->
+    <div class="fixed z-20 w-2 h-2 bg-text rounded-full pointer-events-none transition-all duration-200 ease-out" id="cursor"></div>
+    <div class="fixed z-20 w-4 h-4 border border-text rounded-full pointer-events-none transition-all duration-300 ease-out opacity-50" id="cursor-trail"></div>
+    <!-- Background grid decoration -->
+    <div class="fixed inset-0 grid grid-cols-12 w-full h-full pointer-events-none opacity-[0.019]">
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+        <div class="border-r border-text"></div>
+    </div>
+
+    <!-- Navegación Superior con hover effect -->
+    <header class="flex justify-between w-full max-w-6xl mx-auto py-4 px-6 text-sm sticky top-0 bg-bg/80 backdrop-blur-sm z-10">
+        <a href="../../index.html" class="tracking-wide hover:opacity-70 relative group flex items-center space-x-2">
+            <span class="inline-block transition-transform duration-300 group-hover:-translate-x-2">←</span>
+            <span>Volver</span>
+        </a>
+        <p class="tracking-wide">Proyectos</p>
+    </header>
+
+    <!-- Título de la Sección -->
+    <div class="flex justify-center mt-8 md:mt-12 px-4">
+        <h1 class="text-[42px] md:text-[88px] leading-[1.2] md:leading-[106px] flex items-center text-center">
+            <span class="overflow-hidden flex flex-wrap justify-center gap-0">
+                <span class="font-elegant italic inline-block opacity-0 animate-rise" style="animation-delay: 0.8s">M</span>
+                <span class="font-elegant italic inline-block opacity-0 animate-rise" style="animation-delay: 0.6s">y</span>
+                <span class="inline-block w-2 md:w-3"></span>
+                <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.5s">P</span>
+                <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.3s">r</span>
+                <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.1s">o</span>
+                <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0s">j</span>
+                <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.2s">e</span>
+                <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.4s">c</span>
+                <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.7s">t</span>
+                <span class="inline-block opacity-0 animate-rise" style="animation-delay: 0.9s">s</span>
+            </span>
+        </h1>
+    </div>
+
+    <p class="text-xl md:text-[32px] leading-relaxed md:leading-[34px] text-center max-w-3xl mx-auto mt-6 px-4 opacity-0 animate-fadeInUp">
+        Una colección de proyectos donde exploro ideas, tecnologías y soluciones creativas.
+        Cada uno de ellos representa un reto, una historia y una evolución en mi camino como desarrollador.
+    </p>
+
+    <!-- Indicador de Scroll con animación -->
+    <div class="text-sm text-textSecondary text-center mt-8 md:mt-10 animate-bounce">
+        Scroll for more
+        <div class="mx-auto mt-2 w-px h-6 bg-textSecondary"></div>
+    </div>
+
+    <!-- Grid de Proyectos - Responsive con 1, 2 o 4 columnas -->
+    <section class="w-full max-w-6xl mx-auto mt-16 md:mt-24 px-4 md:px-6 mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Proyecto 1: Spotify Clon -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 opacity-0 animate-appear" style="animation-delay: 0.1s; animation-play-state: paused;">
+                <div class="relative overflow-hidden">
+                    <img src="../resources/images/spotify.jpg" alt="Spotify Clone Project" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
+                </div>
+                <div class="p-5">
+                    <span class="text-xs text-primary font-medium tracking-wider">FEATURED PROJECT</span>
+                    <h3 class="text-xl font-bold text-text mt-2">Spotify Clon</h3>
+                    <p class="text-textSecondary mt-3 text-sm line-clamp-3">
+                        Reproductor de música con una interfaz gráfica basada en el famoso Spotify.
+                        Ahora puedes disfrutar de tus playlists sin anuncios y sin miedo a que te pida actualizar a Premium.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">HTML</span>
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">CSS</span>
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">JavaScript</span>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="#" class="text-sm font-medium text-primary hover:text-hover flex items-center gap-1 transition-colors">
+                            Demo <span class="inline-block">→</span>
+                        </a>
+                        <a href="#" class="text-sm font-medium text-textSecondary hover:text-text flex items-center gap-1 transition-colors">
+                            GitHub <span class="inline-block">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2: Monster Slayer (Phaser) -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 opacity-0 animate-appear" style="animation-delay: 0.2s; animation-play-state: paused;">
+                <div class="relative overflow-hidden">
+                    <img src="../resources/images/phaserGame.jpg" alt="Monster Slayer Game" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
+                </div>
+                <div class="p-5">
+                    <span class="text-xs text-primary font-medium tracking-wider">GAME DEVELOPMENT</span>
+                    <h3 class="text-xl font-bold text-text mt-2">Monster Slayer</h3>
+                    <p class="text-textSecondary mt-3 text-sm line-clamp-3">
+                        Oleadas de monstruos, una katana y reflejos de ninja.
+                        Corta, esquiva y sobrevive en este caótico minijuego hecho con Phaser 3.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">HTML</span>
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">JavaScript</span>
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">Phaser</span>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="#" class="text-sm font-medium text-primary hover:text-hover flex items-center gap-1 transition-colors">
+                            Jugar <span class="inline-block">→</span>
+                        </a>
+                        <a href="#" class="text-sm font-medium text-textSecondary hover:text-text flex items-center gap-1 transition-colors">
+                            GitHub <span class="inline-block">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3: Web de Emprendimiento -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 opacity-0 animate-appear" style="animation-delay: 0.3s; animation-play-state: paused;">
+                <div class="relative overflow-hidden">
+                    <img src="../resources/images/webEmprendimiento.jpg" alt="Emprendimiento Website" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
+                </div>
+                <div class="p-5">
+                    <span class="text-xs text-primary font-medium tracking-wider">COLLABORATIVE PROJECT</span>
+                    <h3 class="text-xl font-bold text-text mt-2">Web de Emprendimiento</h3>
+                    <p class="text-textSecondary mt-3 text-sm line-clamp-3">
+                        Participación en el desarrollo de la web para las Jornadas de Emprendimiento Sostenible 2025 del I.E.S. Albarregas.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">HTML</span>
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">Astro</span>
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">Tailwind</span>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="#" class="text-sm font-medium text-primary hover:text-hover flex items-center gap-1 transition-colors">
+                            Demo <span class="inline-block">→</span>
+                        </a>
+                        <a href="#" class="text-sm font-medium text-textSecondary hover:text-text flex items-center gap-1 transition-colors">
+                            GitHub <span class="inline-block">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: App de Gasolineras -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 opacity-0 animate-appear" style="animation-delay: 0.4s; animation-play-state: paused;">
+                <div class="relative overflow-hidden">
+                    <img src="../resources/images/gasolinerasAPI.jpg" alt="Aplicación de Gasolineras" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-105">
+                </div>
+                <div class="p-5">
+                    <span class="text-xs text-primary font-medium tracking-wider">APP DEVELOPMENT</span>
+                    <h3 class="text-xl font-bold text-text mt-2">App de Gasolineras</h3>
+                    <p class="text-textSecondary mt-3 text-sm line-clamp-3">
+                        Aplicación que muestra en tiempo real los precios de combustible de las gasolineras cercanas a tu ubicación,
+                        usando la API pública del gobierno de España.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">React</span>
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">Node.js</span>
+                        <span class="text-xs font-semibold bg-border px-2 py-1 rounded-full">Google Maps API</span>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="#" class="text-sm font-medium text-primary hover:text-hover flex items-center gap-1 transition-colors">
+                            Demo <span class="inline-block">→</span>
+                        </a>
+                        <a href="#" class="text-sm font-medium text-textSecondary hover:text-text flex items-center gap-1 transition-colors">
+                            GitHub <span class="inline-block">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectCards.forEach(card => {
+            card.style.animationPlayState = 'running';
+        });
+
+    </script>
+    <script src="../js/mouse.js"></script>
+
+    <style>
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-card {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: appear 0.7s ease-out forwards;
+            animation-play-state: paused;
+            animation-timeline: view();
+            animation-range: entry 10% cover 30%;
+        }
+
+    </style>
+</body>
+</html>
