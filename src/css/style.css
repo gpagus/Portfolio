@@ -1,0 +1,160 @@
+/* FUENTES */
+@font-face {
+    font-family: "Roobert";
+    src: url("../resources/fonts/Roobert/RoobertTRIAL-Regular.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Roobert";
+    src: url("../resources/fonts/Roobert/RoobertTRIAL-Medium.woff2")
+      format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Roobert";
+    src: url("../resources/fonts/Roobert/RoobertTRIAL-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Roobert";
+    src: url("../resources/fonts/Roobert/RoobertTRIAL-Italic.woff2")
+      format("woff2");
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@500&display=swap");
+
+  /* ANIMACIÓN DE ENTRADA DESDE ABAJO */
+  @keyframes riseFromGround {
+    0% {
+      opacity: 0;
+      transform: translateY(150%);
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-rise {
+    animation: riseFromGround 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-title span {
+    display: inline-block;
+    opacity: 0;
+    animation: riseFromGround 0.8s ease-out forwards;
+  }
+
+  .animate-content {
+    opacity: 0;
+    animation: fadeInScale 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1.6s ease-out forwards;
+  }
+
+  /* Header fijo */
+  .sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+  }
+  /* Suaviza la transición de los elementos */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .project-btn {
+    background-color: #ffffff;
+    border: 2.5px solid #1c1c1c;
+    box-sizing: border-box;
+    color: #1c1c1c;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+      transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+  }
+
+  .project-btn:focus-visible {
+    box-shadow: #1c1c1c 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow 0.2s;
+  }
+
+  .project-btn:active {
+    background-color: #f7f7f7;
+    border-color: #1c1c1c;
+    transform: scale(0.96);
+  }
+
+  .project-btn:disabled {
+    border-color: #dddddd;
+    color: #dddddd;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
