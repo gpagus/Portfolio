@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio web de Agustín Gómez Piñero, desarrollador web especializado en diseño frontend y experiencia de usuario.">
   <title>GPAGUS</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +21,7 @@
             bg: "#EBEBEB",
             text: "#1c1c1c",
             textSecondary: "#3E5C76",
-            primary: "#4A90E2",
+            primary: "#1765C0",
             hover: "#005A87",
             border: "#D9E6F2"
           }
@@ -28,17 +29,9 @@
       }
     };
   </script>
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://unpkg.com/three@latest/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@latest/examples/jsm/"
-      }
-    }
-  </script>
 </head>
 
-<body class="bg-bg text-text font-sans flex flex-col items-center min-h-screen overflow-hidden">
+<body class="bg-bg text-text font-sans flex flex-col items-center min-h-screen">
   <!-- Cursor personalizado -->
   <div class="fixed z-20 w-2 h-2 bg-text rounded-full pointer-events-none transition-all duration-200 ease-out" id="cursor"></div>
   <div class="fixed z-20 w-4 h-4 border border-text rounded-full pointer-events-none transition-all duration-300 ease-out opacity-50" id="cursor-trail"></div>
@@ -60,9 +53,9 @@
   </div>
 
   <!-- Contenedor principal -->
-  <div class="relative w-full max-w-6xl text-center px-0 md:px-0 min-h-screen flex flex-col justify-between">
+  <div class="relative w-full max-w-6xl px-4 md:px-6 min-h-screen flex flex-col justify-between">
     <!-- Navegación Superior -->
-    <header class="flex justify-between w-full max-w-6xl mx-auto py-4 px-6 text-sm sticky top-0 bg-bg/80 backdrop-blur-sm z-10">
+    <header class="flex justify-between w-full mx-auto py-4 text-xs sm:text-sm sticky top-0 bg-bg/80 backdrop-blur-sm z-10">
       <p class="tracking-wide group">
         Web Developer
         <span class="block h-px w-0 bg-text transition-all duration-300 group-hover:w-full"></span>
@@ -74,16 +67,15 @@
     </header>
 
     <!-- Sección central con título y navegación -->
-    <div class="flex-1 flex flex-col justify-center">
-      <!-- Título central -->
-      <div class="flex justify-center mb-16 sm:mb-24 md:mb-10">
-        <h1 class="flex justify-center text-[10vw] sm:text-[12vw] md:text-[14vw] leading-tight flex items-center relative group">
-
+    <div class="flex-1 flex flex-col justify-center items-center">
+      <!-- Título central - Reducir tamaño para móvil -->
+      <div class="flex justify-center mb-12 sm:mb-16 md:mb-24">
+        <h1 class="flex justify-center text-[11vw] sm:text-[12vw] md:text-[14vw] leading-tight items-center relative group">
           <span class="group-hover:opacity-50 transition-opacity duration-300">&lt;/</span>
           <span class="overflow-hidden flex gap-0">
             <span class="font-elegant italic inline-block opacity-0 animate-rise hover:text-primary transition-colors duration-300" style="animation-delay: 0.5s;">G</span>
             <span class="font-elegant italic inline-block opacity-0 animate-rise hover:text-primary transition-colors duration-300" style="animation-delay: 0.3s;">p</span>
-            <span class="inline-block w-2 md:w-3"></span>
+            <span class="inline-block w-1 sm:w-2 md:w-3"></span>
             <span class="inline-block opacity-0 animate-rise hover:text-primary transition-colors duration-300" style="animation-delay: 0s;">A</span>
             <span class="inline-block opacity-0 animate-rise hover:text-primary transition-colors duration-300" style="animation-delay: 0.1s;">g</span>
             <span class="inline-block opacity-0 animate-rise hover:text-primary transition-colors duration-300" style="animation-delay: 0.4s;">u</span>
@@ -93,19 +85,18 @@
         </h1>
       </div>
 
-      <!-- Menú de Navegación -->
-      <nav class="w-full flex flex-col md:flex-row justify-around items-center gap-3 sm:gap-6 md:gap-0 text-sm uppercase tracking-wider opacity-0 animate-fadeInUp">
-
+      <!-- Menú de Navegación - Mejorar espaciado móvil -->
+      <nav class="w-full flex flex-col justify-center items-center gap-4 sm:gap-5 md:flex-row md:justify-around md:gap-0 text-sm sm:text-base uppercase tracking-wider opacity-0 animate-fadeInUp">
         <p class="text-xl animate-pulse hidden md:block">✦</p>
-        <a href="./src/html/about.html" class="relative group py-1">
+        <a href="./src/html/about.html" class="relative group py-2">
           <span class="text-textSecondary group-hover:text-primary transition-colors duration-300">01</span> Sobre mí
           <span class="absolute -bottom-1 left-0 w-0 h-px bg-text transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="./src/html/projects.html" class="relative group py-1">
+        <a href="./src/html/projects.html" class="relative group py-2">
           <span class="text-textSecondary group-hover:text-primary transition-colors duration-300">02</span> Proyectos
           <span class="absolute -bottom-1 left-0 w-0 h-px bg-text transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="./src/html/contact.html" class="relative group py-1">
+        <a href="./src/html/contact.html" class="relative group py-2">
           <span class="text-textSecondary group-hover:text-primary transition-colors duration-300">03</span> Contacto
           <span class="absolute -bottom-1 left-0 w-0 h-px bg-text transition-all duration-300 group-hover:w-full"></span>
         </a>
@@ -113,56 +104,32 @@
       </nav>
     </div>
 
-    <!-- Texto inferior + Ilustración -->
-    <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 lg:gap-40 px-4 pb-4 sm:pb-8">
-      <!-- Bloque de texto izquierdo -->
-      <div class="flex flex-col items-center w-4/5 md:w-2/5 lg:w-1/3 text-center group">
+    <!-- Texto inferior -->
+    <div class="flex flex-col items-center gap-4 sm:gap-6 mb-8 mt-6 sm:mt-0">
+      <!-- Bloques de texto - Aumento del espacio entre bloques -->
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-16 md:gap-24 lg:gap-32 w-full">
+        <!-- Bloque de texto izquierdo -->
+        <div class="flex flex-col items-center w-full sm:w-2/5 lg:w-1/3 text-center group">
+          <img src="./src/resources/images/Hey.webp" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 transition-transform duration-300 group-hover:scale-110 mb-2" alt="Icono izquierdo" loading="lazy">
+          <p class="text-sm sm:text-base md:text-lg leading-relaxed opacity-100 max-w-xs mx-auto">
 
+            AGUSTÍN (HE/HIM) AKA GPAGUS IS A WEB DEVELOPER FROM MONTIJO, BADAJOZ, SPAIN.
+          </p>
+        </div>
 
-        <img src="./src/resources/images/Hey.gif" class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 transition-transform duration-300 group-hover:scale-110" alt="Icono izquierdo" loading="lazy">
-        <p class="text-[11px] md:text-[13px] p-2 md:p-3 leading-relaxed transition-all duration-300 group-hover:text-primary">
-          AGUSTÍN (HE/HIM) AKA GPAGUS IS A WEB DEVELOPER FROM MONTIJO, BADAJOZ, SPAIN.
-        </p>
-      </div>
+        <!-- Bloque de texto derecho -->
+        <div class="flex flex-col items-center w-full sm:w-2/5 lg:w-1/3 text-center group">
+          <img src="./src/resources/images/Solution.webp" class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 transition-transform duration-300 group-hover:scale-110 mb-2" alt="Icono derecho" loading="lazy">
+          <p class="text-sm sm:text-base md:text-lg leading-relaxed opacity-100 max-w-xs mx-auto">
 
-      <!-- Ilustración central -->
-      <div id="three-container" class="flex justify-center md:w-32 lg:w-48 my-2 md:my-4 hover:scale-110 transition-transform duration-500"></div>
-      <!-- Bloque de texto derecho -->
-      <div class="flex flex-col items-center w-4/5 md:w-2/5 lg:w-1/3 text-center group">
-
-
-        <img src="./src/resources/images/Solution.gif" class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 transition-transform duration-300 group-hover:scale-110" alt="Icono derecho" loading="lazy">
-        <p class="text-[11px] md:text-[13px] p-2 md:p-3 leading-relaxed transition-all duration-300 group-hover:text-primary">
-          PASSIONATE ABOUT CREATING DIGITAL SOLUTIONS THAT MAKE AN IMPACT.
-        </p>
+            PASSIONATE ABOUT CREATING DIGITAL SOLUTIONS THAT MAKE AN IMPACT.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Script JS -->
-  <script defer type="module" src="./src/js/index.js"></script>
-  <script>
-    const cursor = document.getElementById('cursor');
-    const cursorTrail = document.getElementById('cursor-trail');
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-
-      setTimeout(() => {
-        cursorTrail.style.left = e.clientX - 4 + 'px';
-        cursorTrail.style.top = e.clientY - 4 + 'px';
-      }, 100);
-    });
-
-    document.addEventListener('mousedown', () => {
-      cursor.classList.add('scale-150');
-      cursorTrail.classList.remove('scale-150');
-    });
-    document.addEventListener('mouseup', () => {
-      cursor.classList.remove('scale-150');
-      cursorTrail.classList.remove('scale-150');
-    });
-  </script>
+  <script defer type="module" src="./src/js/mouse.js"></script>
 </body>
 </html>

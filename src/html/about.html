@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio web de Agustín Gómez Piñero, desarrollador web especializado en diseño frontend y experiencia de usuario.">
+
   <title>About - GPAGUS</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +22,7 @@
             bg: "#EBEBEB",
             text: "#1c1c1c",
             textSecondary: "#3E5C76",
-            primary: "#4A90E2",
+            primary: "#1765C0",
             hover: "#005A87",
             border: "#D9E6F2"
           }
@@ -29,30 +31,12 @@
     };
   </script>
 
-  <style>
-    /* Breakpoints para responsive */
-    @media (max-width: 768px) {
-      .title-responsive {
-        font-size: 48px;
-        line-height: 58px;
-      }
-    }
-
-    /* Móvil pequeño */
-    @media (max-width: 480px) {
-      .title-responsive {
-        font-size: 38px;
-        line-height: 48px;
-      }
-    }
-
-  </style>
 </head>
 
 <body class="bg-bg text-text font-sans min-h-screen">
   <!-- Cursor personalizado -->
-  <div class="fixed z-20 w-2 h-2 bg-text rounded-full pointer-events-none transition-all duration-200 ease-out" id="cursor"></div>
-  <div class="fixed z-20 w-4 h-4 border border-text rounded-full pointer-events-none transition-all duration-300 ease-out opacity-50" id="cursor-trail"></div>
+  <div class="fixed z-30 w-2 h-2 bg-text rounded-full pointer-events-none transition-all duration-200 ease-out" id="cursor"></div>
+  <div class="fixed z-30 w-4 h-4 border border-text rounded-full pointer-events-none transition-all duration-300 ease-out opacity-50" id="cursor-trail"></div>
 
   <!-- Background grid decoration - reducido en móvil -->
   <div class="fixed inset-0 grid grid-cols-6 md:grid-cols-12 w-full h-full pointer-events-none opacity-[0.019]">
@@ -71,7 +55,7 @@
   </div>
 
   <!-- Navegación Superior con hover effect -->
-  <header class="flex justify-between w-full max-w-6xl mx-auto py-4 px-6 text-sm sticky top-0 bg-bg/80 backdrop-blur-sm z-10">
+  <header class="flex justify-between w-full max-w-6xl mx-auto py-4 px-6 text-sm sticky top-0 bg-bg/80 backdrop-blur-sm z-20">
     <a href="../../index.html" class="tracking-wide hover:opacity-70 relative group flex items-center space-x-2">
       <span class="inline-block transition-transform duration-300 group-hover:-translate-x-2">←</span>
       <span>Volver</span>
@@ -85,7 +69,7 @@
       <!-- Foto de perfil - tamaño reducido en móvil -->
       <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 relative group animate-content mx-auto md:mx-0">
         <div class="absolute inset-0 border-2 border-text rounded-xl transform transition-transform duration-300 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-        <img src="../resources/images/selfi.jpg" alt="GPAGUS" class="w-full h-full object-cover rounded-xl relative z-10">
+        <img src="../resources/images/avatar.webp" alt="GPAGUS" class="w-full h-full object-cover rounded-xl relative z-10">
       </div>
 
       <!-- Descripción -->
@@ -105,7 +89,7 @@
             </span>
           </h1>
         </div>
-        <div class="animate-content text-center md:text-left mt-6 md:mt-2">
+        <div class="text-center md:text-left mt-6 md:mt-2">
           <p class="text-base md:text-lg leading-relaxed mb-6">
             Soy Agustín, un desarrollador web apasionado por convertir ideas en experiencias digitales memorables. Me especializo en diseñar soluciones elegantes y funcionales, siempre buscando el equilibrio entre un código limpio y un diseño intuitivo. Me encanta trabajar en proyectos que tengan impacto real y que ayuden a mejorar la digitalización de pequeños negocios y ayuntamientos.
           </p>
@@ -116,12 +100,13 @@
             </svg>
           </a>
         </div>
+
       </div>
     </section>
 
     <!-- Sección de habilidades - ajustada para móvil -->
     <section class="mb-16 md:mb-24 animate-content px-2" style="animation-delay: 0.8s;">
-      <h2 class="text-2xl md:text-3xl font-elegant mb-8 md:mb-12 text-center">Technical Stack</h2>
+      <h2 class="text-2xl md:text-3xl font-elegant mb-8 md:mb-12 text-center">Stack Técnico</h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
         <!-- Grupos de habilidades -->
@@ -147,9 +132,9 @@
           </h3>
           <ul class="space-y-2 text-textSecondary">
             <li class="transition-transform hover:translate-x-2">Node.js</li>
-            <li class="transition-transform hover:translate-x-2">Express</li>
-            <li class="transition-transform hover:translate-x-2">MongoDB</li>
-            <li class="transition-transform hover:translate-x-2">REST APIs</li>
+            <li class="transition-transform hover:translate-x-2">MySQL</li>
+            <li class="transition-transform hover:translate-x-2">Java EE</li>
+            <li class="transition-transform hover:translate-x-2">Hibernate</li>
           </ul>
         </div>
 
@@ -173,10 +158,10 @@
             Soft Skills
           </h3>
           <ul class="space-y-2 text-textSecondary">
-            <li class="transition-transform hover:translate-x-2">Problem Solving</li>
-            <li class="transition-transform hover:translate-x-2">Team Collaboration</li>
-            <li class="transition-transform hover:translate-x-2">Communication</li>
-            <li class="transition-transform hover:translate-x-2">Adaptability</li>
+            <li class="transition-transform hover:translate-x-2">Resolución de problemas</li>
+            <li class="transition-transform hover:translate-x-2">Colaboración en equipo</li>
+            <li class="transition-transform hover:translate-x-2">Comunicación</li>
+            <li class="transition-transform hover:translate-x-2">Adaptabilidad</li>
           </ul>
         </div>
       </div>
